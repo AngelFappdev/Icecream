@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
+    <script src = "costs.js"></script>
+    <script src = "main.js"></script>
 </head>
 <body>
     <h1>Get Your Ice Cream!</h1>
-  <p>Number of Scoops</p><input type ="number" id="num_s">
+  <p>Number of Scoops</p><input type="number" id="num_s" value="1" min="1" max ="4">
   <input type ="radio" id="cone" name="cone" value="Cone"> Cone
-  <input type ="radio" id="cup" name="cup" value="Cup"> Cup
+  <input type ="radio" id="cup" name="cup" value="Cup" checked> Cup
   <br>
   <div id ="Toppings">
     <fieldset>
-        <legend>Toppings </legend>
-            <input type="checkbox" id ="sprinkles"> Sprinkles($0.50)<br>
-            <input type="checkbox" id ="hot_fudge"> Hot Fudge($1.25)<br>
-            <input type="checkbox" id ="whipped_cream"> Whipped Cream($0.25)<br>
-            <input type="checkbox" id ="cherries"> Cherries($.25)<br>
+        <legend id="Toppings">Toppings </legend>
+            <input type="checkbox" id="sprinkles" > Sprinkles($0.50)<br>
+            <input type="checkbox" id="hot_fudge" > Hot Fudge($1.25)<br>
+            <input type="checkbox" id="whipped_cream" > Whipped Cream($0.25)<br>
+            <input type="checkbox" id="cherry" > Cherries($.25)<br>
     </fieldset>
   </div>
   <br>
   <div>
     <input type ="button" id ="button" value="Submit Order">
   </div>
-  <pre id="output"> Click on button Above.</pre>
+  <br>
+  <table id ="results">
+    <tr><th>Base Price:</th><td id="price"></td></tr><br>
+    <tr><th>Tax:</th><td id="tax"></td></tr><br>
+    <tr><th>Total:</th><td id="total"></td></tr><br>
+  </table>
 
 </body>
 </html>
